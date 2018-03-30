@@ -27,3 +27,27 @@ var flattenedArray = arrayOfArrays.flatMap { array in
 
 // outputs: [2, 2, 4, 4, 6, 6]
 print(flattenedArray)
+
+// 3 Example of get minimum value in array
+
+let list = [1,2,3,4,5,6, -2, 1, 9, 10, 11 , 12]
+
+var minimum = list[0]
+for item in list {
+    if item < minimum {
+        minimum = item
+    }
+}
+print(minimum)
+
+let minimumFromReduce = list.reduce(list[0]) { (acc, cur) in
+    return acc > cur ? cur : acc
+}
+print(minimumFromReduce)
+
+let minimum3: Int = {
+    return list.min() ?? 0
+}()
+
+print(minimum3)
+
