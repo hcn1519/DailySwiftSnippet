@@ -51,3 +51,13 @@ let minimum3: Int = {
 
 print(minimum3)
 
+
+// 4. Example of zip
+
+let query = ["전부", "썰", "로맨스", "미스테리", "팬픽"]
+let titles = ["전체", "일상/썰", "로맨스/판타지", "공포/스릴러/미스테리", "BL/GL/팬픽"]
+let array3 = [23154, 435, 23523, 23423, 5646]
+
+for (queryItem, (title, number)) in zip(query, zip(titles, array3)) {
+    print("Query: \(queryItem), TItle: \(title), Number: \(number)")
+}
